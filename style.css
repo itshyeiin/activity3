@@ -1,0 +1,264 @@
+/* <!-- LAPADA, ANTHONY JUNIOR G. --> */
+/* <!-- BSIT-3A --> */
+/* <!-- Activity 3: Media Queries --> */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.4;
+    color: #27374D;
+}
+
+.container{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1.2rem;
+}
+
+header{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    background-image: url(images/banner1.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.navbar{
+    padding: 1.2rem;
+}
+
+.navbar-brand{
+    color: #fff;
+    font-size: 24px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.navbar-brand img{
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-nav{
+    text-align: center;
+    padding: 0.8rem 0 0.2rem 0;
+}
+
+.navbar-nav a{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 800;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.4rem 0.1rem;
+    letter-spacing: 3px;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar-nav a:hover{
+    color: #FFBB5C;
+}
+
+.banner{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.banner-title{
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+.banner p{
+    padding: 1rem 0 2rem 0;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    font-weight: 300;
+    word-spacing: 2px;
+}
+
+.banner p span{
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.banner p span:hover{
+    color: #FFBB5C;
+    text-decoration: underline;
+}
+
+.banner form{
+    background: #fff;
+    border-radius: 2rem;
+    padding: 0.6rem 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-input{
+    font-size: 1.1rem;
+    width: 100%;
+    outline: 0;
+    padding: 0.6rem 0;
+    border: none;
+}
+
+.search-btn{
+    width: 40px;
+    font-size: 1.1rem;
+    border: none;
+    background: transparent;
+    outline: 0;
+    cursor: pointer;
+}
+
+.search-btn i{
+    transition: 0.3s ease-in-out;
+}
+
+.search-btn i:hover{
+    color: #FFBB5C;
+}
+
+.cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 60px 20px 0 20px;
+}
+
+.cont .heading{
+    width: 40%;
+    padding-bottom: 50px;
+}
+
+.cont .heading h3{
+    font-size: 3em;
+    font-weight: bolder;
+    color: #333;
+    padding-bottom: 10px;
+}
+
+.cont .heading h3 span{
+    font-weight: 100;
+}
+
+.cont .box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cont .box .columns{
+    display: flex;
+    flex-direction: column;
+    width: 32.5%;
+}
+
+.cont .box .columns img{
+    width: 100%;
+    padding-bottom: 15px;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.cont .box .columns img:hover{
+    filter: brightness(0.5);
+}
+
+footer {
+    background-color: #27374D;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (min-width:768px) {
+    .navbar .container {
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+    }
+
+    footer {
+        padding: 20px 10px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .cont .box {
+        flex-direction: column;
+    }
+    .cont .box .columns{
+       width: 100%;
+    }
+}
+
+@media screen and (min-width:600px) {
+    .navbar-nav a{
+        padding-right: 1.2rem;
+        padding-left: 1.2rem;
+    }
+
+    .banner-title{
+       font-size: 5rem;
+    }
+
+    .banner form{
+       margin-top: 1.4rem;
+       width: 80%;
+       margin-left: auto;
+       margin-right: auto;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .cont .heading {
+       width: 100%;
+    }
+    .cont .heading h3 {
+       font-size: 1em;
+    }
+}
+
+@media only screen and (max-width:375px) {
+    .cont .heading {
+       width: 100%;
+    }
+    .cont .heading h3 {
+       font-size: 2em;
+       padding: 0;
+    }
+
+    footer{
+        padding: 1rem;
+        font-size: .75rem
+    }
+}
